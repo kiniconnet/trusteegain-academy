@@ -1,0 +1,5 @@
+
+
+.footerSocialIcons{
+    @apply text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5;
+}

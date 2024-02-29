@@ -1,0 +1,30 @@
+
+
+.sectionSlide{
+     @apply  py-2 flex flex-col items-center justify-center whitespace-nowrap;
+     max-width: 800px;
+     margin: 0 auto;
+     overflow:hidden
+}
+
+.logoSlides{
+    display: flex;
+    max-width: 600px;
+    gap: 1rem;
+    flex-wrap: nowrap;
+
+
+
+}
+ @keyframes slide {
+    from{
+        transform: translateX(0%)
+    }
+    to{
+        transform: translateX(-100%)
+    }
+ }
+.logoSlides img{
+     @apply h-12 mx-5 ;
+     
+}

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+
 import style from './navbar.module.css'
 import Logo from './Logo';
 import { motion } from "framer-motion"
@@ -9,10 +11,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { IoIosLogIn } from "react-icons/io";
 
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
-}
+ 
 
 const Navbar = () => {
     const { navbarContainer,
@@ -38,19 +37,19 @@ const [isToggle, setIsToggle]= useState(false)
         <motion.div  className={`w-full md:block md:w-auto ${isToggle || "hidden"}`}>
           <ul className={navUnorderList}>
             <li>
-              <a href="#" className={navLink}>Home</a>
+              <Link to="/" className={navLink}>Home</Link>
             </li>
             <li>
-              <a href="#" className={navLink}>About</a>
+              <Link to="/about" className={navLink}>About</Link>
             </li>
             <li>
-              <a href="#" className={navLink}>Courses</a>
+              <Link to="/courses" className={navLink}>Courses</Link>
             </li>
             <li>
-              <a href="#" className={navLink}>Contact</a>
+              <Link to="/contact" className={navLink}>Contact</Link>
             </li>
             <li>
-              <a href="#" className={navLink}>Login <IoIosLogIn className='mx-2'/> </a>
+              <Link to="/login" className={navLink}>Login <IoIosLogIn className='mx-2'/> </Link>
             </li>
           </ul>
         </motion.div>
